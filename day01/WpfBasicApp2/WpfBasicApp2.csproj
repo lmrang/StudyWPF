@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{79AB7756-0874-4A1D-9D09-98EA63EF7029}</ProjectGuid>
+    <ProjectGuid>{4597822C-B649-4003-BA73-A7BF92715E65}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>WpfBasicApp</RootNamespace>
-    <AssemblyName>WpfBasicApp</AssemblyName>
+    <RootNamespace>WpfBasicApp2</RootNamespace>
+    <AssemblyName>WpfBasicApp2</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -58,9 +58,6 @@
     <Compile Include="SubWindow.xaml.cs">
       <DependentUpon>SubWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ThirdWindow.xaml.cs">
-      <DependentUpon>ThirdWindow.xaml</DependentUpon>
-    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -74,10 +71,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="SubWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="ThirdWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -109,8 +102,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Media\185523_hungry_cat_icon.png" />
-    <Content Include="Media\big_buck_bunny_360p_1mb.mp4" />
+    <Resource Include="Image\185523_hungry_cat_icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
