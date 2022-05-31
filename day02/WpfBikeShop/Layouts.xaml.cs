@@ -16,21 +16,13 @@ using System.Windows.Shapes;
 namespace WpfBikeShop
 {
     /// <summary>
-    /// MainWindow.xaml에 대한 상호 작용 논리
+    /// Layouts.xaml에 대한 상호 작용 논리
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Layouts : Page
     {
-        public MainWindow()
+        public Layouts()
         {
             InitializeComponent();
-
-            InitClass(); //Alt+enter 바로 메서드 생성 도움
-                        //ctrl+space
-        }
-
-        private void InitClass()
-        {
-            Car car = new Car();
         }
     }
 }

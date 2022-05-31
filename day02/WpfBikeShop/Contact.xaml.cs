@@ -16,21 +16,18 @@ using System.Windows.Shapes;
 namespace WpfBikeShop
 {
     /// <summary>
-    /// MainWindow.xaml에 대한 상호 작용 논리
+    /// Contact.xaml에 대한 상호 작용 논리
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Contact : Page
     {
-        public MainWindow()
+        public Contact()
         {
             InitializeComponent();
-
-            InitClass(); //Alt+enter 바로 메서드 생성 도움
-                        //ctrl+space
         }
 
-        private void InitClass()
+        private void btnOK_Click(object sender, RoutedEventArgs e)
         {
-            Car car = new Car();
+            MessageBox.Show("Hell, World!!");
         }
     }
 }
