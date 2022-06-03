@@ -20,3 +20,12 @@
 
   ![YoutubePaly](https://github.com/lmrang/StudyWPF/blob/main/capture/trailer.JPG?raw=true)
   검색영화 예고편보기 실행화면
+
+
+
+<br/>
+## Naver 뉴스검색
+- WPF (.NET Framework 4.7.2 / C#)
+  - MahApps.Metro MetroUI/Morden UI
+  - Newtonsoft.Json
+  - Naver OpenAPI
