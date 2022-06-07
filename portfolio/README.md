@@ -27,11 +27,11 @@
 
 ## Naver 뉴스검색
 - WPF (.NET Framework 4.7.2 / C#)
-  - MahApps.Metro MetroUI/Morden UI
+  - MahApps.Metro MetroUI/Moden UI
   - Newtonsoft.Json
   - Naver OpenAPI
 
 <br/>
 
 ![NaverNewsSearch](https://github.com/lmrang/StudyWPF/blob/main/capture/NewsLink.JPG?raw=true)
-뉴스검색 및 
+뉴스검색
