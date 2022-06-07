@@ -30,3 +30,8 @@
   - MahApps.Metro MetroUI/Morden UI
   - Newtonsoft.Json
   - Naver OpenAPI
+
+<br/>
+
+![NaverNewsSearch](https://github.com/lmrang/StudyWPF/blob/main/capture/NewsLink.JPG?raw=true)
+뉴스검색 및 
