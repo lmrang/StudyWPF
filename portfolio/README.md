@@ -50,5 +50,7 @@
 <br/>
 
 ![SmartHomeMonitoring](https://raw.githubusercontent.com/lmrang/StudyWPF/main/capture/smarthome.JPG)
+ DB모니터링 화면
+
 
 <br/>
