@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using uPLibrary.Networking.M2Mqtt;
 using uPLibrary.Networking.M2Mqtt.Messages;
 using WpfSmartHomeMonitoringApp.Helpers;
+using WpfSmartHomeMonitoringApp.Models;
 
 namespace WpfSmartHomeMonitoringApp.ViewModels
 {
@@ -146,8 +147,13 @@ namespace WpfSmartHomeMonitoringApp.ViewModels
         private void SetDataBase(string message, string topic)
         {
             var currDatas = JsonConvert.DeserializeObject<Dictionary<string, string>>(message);
-
+            var model = new SmartHomeModel();
             Debug.WriteLine(currDatas);
+            model.DevId = currDatas["DevId"];
+            model.CurrTime = DateTime.Parse(currDatas["CurrTime"]);
+            model.Temp = double.Parse(currDatas["Temp"]);
+            model.Humid = double.Parse(currDatas["Humid"]);
+
 
             using (SqlConnection conn = new SqlConnection(ConnString))
             {
@@ -167,16 +173,16 @@ namespace WpfSmartHomeMonitoringApp.ViewModels
                 try
                 {
                     SqlCommand cmd = new SqlCommand(strInQuery, conn);
-                    SqlParameter parmDevId = new SqlParameter("@DevId", currDatas["DevId"]);
+                    SqlParameter parmDevId = new SqlParameter("@DevId", model.DevId);
                     cmd.Parameters.Add(parmDevId);
 
-                    SqlParameter parmCurrTime = new SqlParameter("@CurrTime",DateTime.Parse( currDatas["CurrTime"]));
+                    SqlParameter parmCurrTime = new SqlParameter("@CurrTime", model.CurrTime);
                     cmd.Parameters.Add(parmCurrTime);
 
-                    SqlParameter parmTemp = new SqlParameter("@Temp", currDatas["Temp"]);
+                    SqlParameter parmTemp = new SqlParameter("@Temp", model.Temp);
                     cmd.Parameters.Add(parmTemp);
 
-                    SqlParameter parmHumid = new SqlParameter("@Humid", currDatas["Humid"]);
+                    SqlParameter parmHumid = new SqlParameter("@Humid", model.Humid);
                     cmd.Parameters.Add(parmHumid);
 
                     if (cmd.ExecuteNonQuery() == 1)
