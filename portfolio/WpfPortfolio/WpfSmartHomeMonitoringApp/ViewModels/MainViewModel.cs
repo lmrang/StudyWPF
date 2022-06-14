@@ -1,11 +1,7 @@
 ﻿using Caliburn.Micro;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using System.Windows;
 using WpfSmartHomeMonitoringApp.Helpers;
 
 namespace WpfSmartHomeMonitoringApp.ViewModels
@@ -80,6 +76,40 @@ namespace WpfSmartHomeMonitoringApp.ViewModels
         {
             var winManager = new WindowManager();
             winManager.ShowDialogAsync(new CustomInfoViewModel("About"));
+        }
+
+        public void MenuStop()
+        {
+            ActivateItemAsync(new DataBaseViewModel()); //화면전환
+            StopSubscribe();                            //화면 정지 & 초기화
+        }
+
+        public void ToolbarStopSubscribe()
+        {
+            ActivateItemAsync(new DataBaseViewModel()); //화면전환
+            StopSubscribe();                            //화면 정지 & 초기화
+        }
+
+        public void StopSubscribe()
+        {
+            if(this.ActiveItem is DataBaseViewModel)
+            {
+                DataBaseViewModel activeModel = (this.ActiveItem as DataBaseViewModel);
+                try
+                {
+                    if(Commons.MQTT_CLIENT.IsConnected)
+                    {
+                        Commons.MQTT_CLIENT.MqttMsgPublishReceived -= activeModel.MQTT_CLIENT_MqttMsgPublishReceived;
+                        Commons.MQTT_CLIENT.Disconnect();
+                        activeModel.IsConnected = Commons.IS_CONNECT = false;
+                    }
+                }
+                catch (Exception ex)
+                {
+
+                }
+                DeactivateItemAsync(this.ActiveItem, true);
+            }
         }
     }
 }
