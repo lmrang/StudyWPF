@@ -39,10 +39,12 @@
 <br/>
 
 ## SmartHome Monitoring
+[이전](https://github.com/lmrang/StudyWPF)
 - WPF (.NET Framework 4.7.2 / C#)
   - MahApps.Metro
   - Caliburn.Micro
   - LiveCharts
+  - OxyPlot.Wpf
   - M2Mqtt
   - Newtonsoft.json
   - SQLServer DB
@@ -51,6 +53,15 @@
 
 ![SmartHomeMonitoring](https://raw.githubusercontent.com/lmrang/StudyWPF/main/capture/smarthome.JPG)
  DB모니터링 화면
+ 
+ 
+![RealTimeView](https://raw.githubusercontent.com/lmrang/StudyWPF/main/capture/realtime.JPG)
+ 실시간 센서 디스플레이
+ 
+![HistoryView](https://raw.githubusercontent.com/lmrang/StudyWPF/main/capture/History.JPG)
+센서값 시각화
 
+![About](https://raw.githubusercontent.com/lmrang/StudyWPF/main/capture/about.JPG)
+ 프로그램 정보
 
 <br/>
