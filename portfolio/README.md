@@ -11,6 +11,9 @@
   - CefSharp WedBrowser Component
   - EntityFramework DB
 
+![MovieFinder](https://raw.githubusercontent.com/lmrang/StudyWPF/main/capture/MovieFinder.gif)
+
+
 <br/>
 
   ![NaverMovieFinder](https://github.com/lmrang/StudyWPF/blob/main/capture/KakaoTalk_20220602_171750721.png?raw=true)  
@@ -48,6 +51,8 @@
   - M2Mqtt
   - Newtonsoft.json
   - SQLServer DB
+
+![SmartHome](https://raw.githubusercontent.com/lmrang/StudyWPF/main/capture/SmartHome.gif)
 
 <br/>
 
