@@ -36,7 +36,7 @@
 
 <br/>
 
-![NaverNewsSearch](https://github.com/lmrang/StudyWPF/blob/main/capture/NewsLink.JPG?raw=true)
+![NaverNewsSearch](https://github.com/lmrang/StudyWPF/blob/main/capture/NewsLink2.JPG?raw=true)
 뉴스검색
 
 <br/>
